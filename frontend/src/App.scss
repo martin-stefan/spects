@@ -1,4 +1,10 @@
+@import './Variables.scss';
+@import './Components/Footer/Footer.scss';
 /* SCSS HEX */
 $eggshell: #faf3ddff;
 $laurel-green: #c8d5b9ff;
 $kombu-green: #2a3c24ff;
+
+body {
+  background-color: $eggshell;
+}
