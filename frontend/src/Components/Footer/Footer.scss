@@ -1,0 +1,20 @@
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 15rem;
+  width: 100%;
+  background-color: $kombu-green;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  color: $eggshell;
+}
+
+.btt {
+  text-decoration: none;
+  color: $eggshell;
+}
