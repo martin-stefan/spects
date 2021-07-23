@@ -1,6 +1,15 @@
 @import './Variables.scss';
 @import './Components/Footer/Footer.scss';
 @import './Components/StatsBar/StatsBar.scss';
+@import './Components/LogBtn/LogBtn.scss';
+@import './Components/Nav/Nav.scss';
+
+@import './Pages/About/About.scss';
+@import './Pages/Dashboard/Dashboard.scss';
+@import './Pages/Settings/Settings.scss';
+@import './Pages/Landing/Landing.scss';
+
+
 /* SCSS HEX */
 $eggshell: #faf3ddff;
 $laurel-green: #c8d5b9ff;
