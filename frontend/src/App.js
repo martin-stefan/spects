@@ -3,6 +3,8 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import Landing from './Pages/Landing/Landing';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import About from './Pages/About/About';
+
 import Nav from './Components/Nav/Nav';
 import Footer from './Components/Footer/Footer';
 
@@ -20,6 +22,9 @@ function App() {
         
         <Route exact path="/" component={ Landing }></Route>
         <Route path="/dash" component={ Dashboard }></Route>
+        <Route path="/about" component={ About }></Route>
+
+
       </Router>
 
       <Footer/>
