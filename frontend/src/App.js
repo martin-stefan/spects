@@ -25,12 +25,15 @@ function App() {
           spects.io
           <Nav/>
         </header>
+
+        <main>
+          <Route exact path="/" component={ Landing }></Route>
+          <Route path="/dash" component={ Dashboard }></Route>
+          <Route path="/about" component={ About }></Route>
+          <Route path="/settings" component={ Settings }></Route>
+        </main>
           
         
-        <Route exact path="/" component={ Landing }></Route>
-        <Route path="/dash" component={ Dashboard }></Route>
-        <Route path="/about" component={ About }></Route>
-        <Route path="/settings" component={ Settings }></Route>
 
 
       </Router>
