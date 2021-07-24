@@ -18,3 +18,10 @@ $kombu-green: #2a3c24ff;
 body {
   background-color: $eggshell;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}

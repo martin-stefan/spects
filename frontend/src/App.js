@@ -20,7 +20,12 @@ function App() {
 
       <Router>
 
-        <Nav/>
+
+        <header>
+          spects.io
+          <Nav/>
+        </header>
+          
         
         <Route exact path="/" component={ Landing }></Route>
         <Route path="/dash" component={ Dashboard }></Route>
