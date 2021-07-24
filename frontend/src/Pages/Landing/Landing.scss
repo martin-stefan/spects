@@ -1,0 +1,18 @@
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.demo {
+  height: 30vh;
+  width: 60vw;
+  background-color: black
+}
+
+.welcome {
+  font-size: 5rem;
+}
