@@ -3,6 +3,8 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 import Landing from './Pages/Landing/Landing';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import Market from './Pages/Market/Market';
+
 import About from './Pages/About/About';
 import Settings from './Pages/Settings/Settings';
 
@@ -22,15 +24,17 @@ function App() {
 
 
         <header>
-          spects.io
+          <p>spects.io</p>
+          
           <Nav/>
         </header>
 
         <main>
           <Route exact path="/" component={ Landing }></Route>
           <Route path="/dash" component={ Dashboard }></Route>
-          <Route path="/about" component={ About }></Route>
+          <Route path="/market" component={ Market }></Route>
           <Route path="/settings" component={ Settings }></Route>
+          <Route path="/about" component={ About }></Route>
         </main>
           
         
