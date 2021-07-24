@@ -40,9 +40,9 @@ function App() {
         
 
 
+        <Footer/>
       </Router>
 
-      <Footer/>
 
     </div>
   
