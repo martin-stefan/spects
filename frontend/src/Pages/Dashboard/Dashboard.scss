@@ -1,0 +1,13 @@
+.dash {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 2rem;
+
+  &__item {
+    width: 70vw;
+    height: 60vh;
+    border: 2px solid black;
+  }
+}
