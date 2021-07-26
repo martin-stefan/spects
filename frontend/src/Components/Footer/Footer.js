@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className="footer">
       <p>Spects.io</p>
-      <a href="" className="btt">Back to top</a>
-      <Link to="/about">About Us</Link>
+      <a href="#" className="btt">Back to top</a>
+      <Link to="/about" className="btt">About Us</Link>
     
     </div>
   );
