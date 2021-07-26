@@ -48,6 +48,42 @@ const Dashboard = () => {
     <div className="dash">
 
       <div className="dash__item">
+        <h1 className="dash__item--title">Calendar Style</h1>
+      </div>
+
+      <div className="dash__item">
+        <h1 className="dash__item--title">List Style</h1>
+
+        <ul className="dash__list">
+          <li className="list__item">
+            <p>Item1 </p>
+            <input type="checkbox" name="completed" id="" />
+            <input type="checkbox" name="delete" id="" />
+          </li>
+          <li className="list__item">
+            <p>Item2 </p>
+            <input type="checkbox" name="completed" id="" />
+            <input type="checkbox" name="delete" id="" />
+          </li>
+          <li className="list__item">
+            <p>Item3</p> 
+            <input type="checkbox" name="completed" id="" />
+            <input type="checkbox" name="delete" id="" />
+          </li>
+          <li className="list__item">
+            <p>Item4 </p>
+            <input type="checkbox" name="completed" id="" />
+            <input type="checkbox" name="delete" id="" />
+          </li>
+          <li className="list__item">
+            <p>Item5</p>
+            <input type="checkbox" name="completed" id="" />
+            <input type="checkbox" name="delete" id="" />
+          </li>
+        </ul>
+      </div>
+
+      <div className="dash__item">
       <h1 className="dash__item--title">Bar Graph</h1>
         <Bar
             data={state}
