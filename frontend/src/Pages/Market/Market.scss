@@ -1,0 +1,57 @@
+.market {
+
+  &__balance {
+    float: right;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 80vw;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    border: 3px solid black;
+    width: 22rem;
+    height: 22rem;
+  }
+}
+
+.item {
+  &__header {
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__buttons {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__img__placeholder {
+    height: 55%;
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    font-size: 1.6rem;
+  }
+}
