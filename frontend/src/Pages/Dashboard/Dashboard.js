@@ -48,6 +48,7 @@ const Dashboard = () => {
     <div className="dash">
 
       <div className="dash__item">
+      <h1 className="dash__item--title">Bar Graph</h1>
         <Bar
             data={state}
             options={{
@@ -66,6 +67,7 @@ const Dashboard = () => {
       </div>
 
       <div className="dash__item">
+      <h1 className="dash__item--title">Pie Chart</h1>
         <Pie
             data={PieState}
             options={{
@@ -83,6 +85,8 @@ const Dashboard = () => {
       </div>
 
       <div className="dash__item">
+      <h1 className="dash__item--title">Doughnut Chart</h1>
+
         <Doughnut
             data={PieState}
             options={{

@@ -7,7 +7,14 @@
 
   &__item {
     width: 70vw;
-    height: 60vh;
+    height: 40vh;
+    max-width: 65vh;
     border: 2px solid black;
+    margin: 2rem 0;
+    margin-left: 10vw;
   }
+}
+
+canvas {
+  max-height: 90%;
 }
