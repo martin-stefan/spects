@@ -33,6 +33,26 @@ const Market = () => {
         </div>
 
       </div>
+
+
+      <div className="item__pop">
+
+        <div className="pop__content">
+          <div className="pop__header">
+            <h3 className="pop__title">Item Item</h3>
+            <p className="pop__price">500</p>
+            <p className="pop__exit">Close</p>
+          </div>
+
+
+          <div className="pop__img">
+            here are images of what it will look like
+          </div>
+
+          <button className="pop__buy">Buy now</button>
+        </div>
+      </div>
+
     </div>
   );
 }
