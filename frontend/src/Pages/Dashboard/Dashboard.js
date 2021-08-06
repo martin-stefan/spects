@@ -55,30 +55,75 @@ const Dashboard = () => {
         <h1 className="dash__item--title">List Style</h1>
 
         <ul className="dash__list">
-          <li className="list__item">
-            <p>Item1 </p>
-            <input type="checkbox" name="completed" id="" />
-            <input type="checkbox" name="delete" id="" />
+          <li className="dash__list--item">
+
+            <div className="list__main">
+              <input type="checkbox" name="completed" id="" className="list__check"/>
+              <p className="list__name">Item1</p>
+            </div>
+
+            <div className="list__options">
+              <button className="hamburg btn">Drag</button>
+              <button className="edit btn">Edit</button>
+              <button className="delete btn">Delete</button>
+
+            </div>
+
           </li>
-          <li className="list__item">
-            <p>Item2 </p>
-            <input type="checkbox" name="completed" id="" />
-            <input type="checkbox" name="delete" id="" />
+          <li className="dash__list--item">
+
+            <div className="list__main">
+              <input type="checkbox" name="completed" id="" className="list__check"/>
+              <p className="list__name">Item2</p>
+            </div>
+
+            <div className="list__options">
+              <button className="hamburg btn">Drag</button>
+              <button className="edit btn">Edit</button>
+              <button className="delete btn">Delete</button>
+            </div>
           </li>
-          <li className="list__item">
-            <p>Item3</p> 
-            <input type="checkbox" name="completed" id="" />
-            <input type="checkbox" name="delete" id="" />
+          <li className="dash__list--item">
+
+            <div className="list__main">
+              <input type="checkbox" name="completed" id="" className="list__check"/>
+              <p className="list__name">Item3</p> 
+            </div>
+
+            <div className="list__options">
+              <button className="hamburg btn">Drag</button>
+              <button className="edit btn">Edit</button>
+              <button className="delete btn">Delete</button>
+            </div>
+
           </li>
-          <li className="list__item">
-            <p>Item4 </p>
-            <input type="checkbox" name="completed" id="" />
-            <input type="checkbox" name="delete" id="" />
+          <li className="dash__list--item">
+
+            <div className="list__main">
+              <input type="checkbox" name="completed" id="" className="list__check"/>
+              <p className="list__name">Item4</p>
+            </div>
+
+            <div className="list__options">
+              <button className="hamburg btn">Drag</button>
+              <button className="edit btn">Edit</button>
+              <button className="delete btn">Delete</button>
+            </div>
+
           </li>
-          <li className="list__item">
-            <p>Item5</p>
-            <input type="checkbox" name="completed" id="" />
-            <input type="checkbox" name="delete" id="" />
+          <li className="dash__list--item">
+
+            <div className="list__main">
+              <input type="checkbox" name="completed" id="" className="list__check"/>
+              <p className="list__name">Item5</p>
+            </div>
+
+            <div className="list__options">
+              <button className="hamburg btn">Drag</button>
+              <button className="edit btn">Edit</button> 
+              <button className="delete btn">Delete</button>
+            </div>
+
           </li>
         </ul>
       </div>
