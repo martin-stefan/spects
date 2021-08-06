@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import StatsBar from '../../Components/StatsBar/StatsBar';
 
 import {Bar, Pie, Doughnut} from 'react-chartjs-2';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 const state = {
   labels: ['January', 'February', 'March',
@@ -42,6 +43,24 @@ const PieState = {
   ]
 }
 
+const tasks = [
+  {
+    id: '0',
+    name: 'Do homework'
+  },
+  {
+    id: '1',
+    name: 'do test'
+  },
+  {
+    id: '2',
+    name: 'do project'
+  },
+  {
+    id: '3',
+    name: 'do quiz'
+  }
+]
 
 const Dashboard = () => {
   return (
@@ -54,78 +73,49 @@ const Dashboard = () => {
       <div className="dash__item">
         <h1 className="dash__item--title">List Style</h1>
 
-        <ul className="dash__list">
-          <li className="dash__list--item">
 
-            <div className="list__main">
-              <input type="checkbox" name="completed" id="" className="list__check"/>
-              <p className="list__name">Item1</p>
-            </div>
+        <DragDropContext>
+          <Droppable droppableId="dash__list">
 
-            <div className="list__options">
-              <button className="hamburg btn">Drag</button>
-              <button className="edit btn">Edit</button>
-              <button className="delete btn">Delete</button>
+            {provided => (
+            
+              <ul className="dash__list" {...provided.droppableProps} ref={provided.innerRef}>
 
-            </div>
+              {tasks.map(({id, name}, index) => {
+                return (
+                <Draggable key={id} draggableId={id} index={index}>
 
-          </li>
-          <li className="dash__list--item">
+                  {provided => (
 
-            <div className="list__main">
-              <input type="checkbox" name="completed" id="" className="list__check"/>
-              <p className="list__name">Item2</p>
-            </div>
+                    
 
-            <div className="list__options">
-              <button className="hamburg btn">Drag</button>
-              <button className="edit btn">Edit</button>
-              <button className="delete btn">Delete</button>
-            </div>
-          </li>
-          <li className="dash__list--item">
+                      <li className="dash__list--item" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
 
-            <div className="list__main">
-              <input type="checkbox" name="completed" id="" className="list__check"/>
-              <p className="list__name">Item3</p> 
-            </div>
+                        <div className="list__main">
+                          <input type="checkbox" name="completed" id="" className="list__check"/>
+                          <p className="list__name">{name}</p>
+                        </div>
 
-            <div className="list__options">
-              <button className="hamburg btn">Drag</button>
-              <button className="edit btn">Edit</button>
-              <button className="delete btn">Delete</button>
-            </div>
+                        <div className="list__options">
+                          <button className="hamburg btn">Drag</button>
+                          <button className="edit btn">Edit</button>
+                          <button className="delete btn">Delete</button>
 
-          </li>
-          <li className="dash__list--item">
+                        </div>
 
-            <div className="list__main">
-              <input type="checkbox" name="completed" id="" className="list__check"/>
-              <p className="list__name">Item4</p>
-            </div>
+                      </li>
+                    
+                  )}
 
-            <div className="list__options">
-              <button className="hamburg btn">Drag</button>
-              <button className="edit btn">Edit</button>
-              <button className="delete btn">Delete</button>
-            </div>
+                </Draggable>
+                )})}
 
-          </li>
-          <li className="dash__list--item">
 
-            <div className="list__main">
-              <input type="checkbox" name="completed" id="" className="list__check"/>
-              <p className="list__name">Item5</p>
-            </div>
-
-            <div className="list__options">
-              <button className="hamburg btn">Drag</button>
-              <button className="edit btn">Edit</button> 
-              <button className="delete btn">Delete</button>
-            </div>
-
-          </li>
-        </ul>
+            
+              </ul>
+            )}
+          </Droppable> 
+        </DragDropContext>
       </div>
 
       <div className="dash__item">
