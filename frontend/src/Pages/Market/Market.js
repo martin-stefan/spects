@@ -6,6 +6,7 @@ const Market = () => {
 
 
   function handleClickPop() {
+    console.log("ran")
     setView(!viewed);
   }
 
@@ -69,15 +70,15 @@ const Market = () => {
 
         <div className="pop__content">
           <div className="pop__header">
-            <h3 className="pop__title">Item Item</h3>
-            <p className="pop__price">500</p>
-            <p className="pop__exit">Close</p>
+            <h3 className="pop__title">Color theme</h3>
+            <p className="pop__price">3000</p>
+            <button className="pop__exit" onClick={() => handleClickPop()}>Close</button>
           </div>
 
 
-          <div className="pop__img">
-            here are images of what it will look like
-          </div>
+          {/* <div className="pop__img">
+            image carousel
+          </div> */}
 
           <button className="pop__buy">Buy now</button>
         </div>
