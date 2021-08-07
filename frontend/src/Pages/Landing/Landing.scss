@@ -5,6 +5,12 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 5rem;
+
+  &__desc {
+    margin-top: 5rem;
+    max-width: 80rem;
+    font-size: 1.8rem;
+  }
 }
 
 .demo {
@@ -15,4 +21,20 @@
 
 .welcome {
   font-size: 5rem;
+}
+
+.signup {
+  margin-top: 5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  background-color: $kombu-green;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  box-shadow: 0 0 1rem rgba(42, 60, 36, 0.61);
+
+  &:hover {
+    transform: translateY(-2px) scale(1.02);
+    transition: 0.2s;
+  }
 }
