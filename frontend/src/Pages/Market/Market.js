@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 
 const Market = () => {
 
@@ -33,7 +33,7 @@ const Market = () => {
 
           </div>
 
-          <img className="item__img__placeholder" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rxwallpaper.site%2Fwp-content%2Fuploads%2Ffuture-city-wallpapers-wallpaper-cave-1-800x800.jpg&f=1&nofb=1"/>
+          <img alt="item desc" className="item__img__placeholder" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rxwallpaper.site%2Fwp-content%2Fuploads%2Ffuture-city-wallpapers-wallpaper-cave-1-800x800.jpg&f=1&nofb=1"/>
 
           <div className="item__buttons">
             <button className="seemore">See more</button>
@@ -55,7 +55,7 @@ const Market = () => {
 
           </div>
 
-          <img className="item__img__placeholder" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rxwallpaper.site%2Fwp-content%2Fuploads%2Ffuture-city-wallpapers-wallpaper-cave-1-800x800.jpg&f=1&nofb=1"/>
+          <img alt="item desc" className="item__img__placeholder" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.rxwallpaper.site%2Fwp-content%2Fuploads%2Ffuture-city-wallpapers-wallpaper-cave-1-800x800.jpg&f=1&nofb=1"/>
 
           <div className="item__buttons">
             <button className="seemore" onClick={() => handleClickPop()}>See more</button>
