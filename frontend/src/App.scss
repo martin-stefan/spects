@@ -10,6 +10,8 @@
 @import './Pages/Landing/Landing.scss';
 @import './Pages/Market/Market.scss';
 
+@import url('https://fontlibrary.org//face/glacial-indifference');
+
 
 /* SCSS HEX */
 $eggshell: #faf3ddff;
@@ -18,6 +20,7 @@ $kombu-green: #2a3c24ff;
 
 body {
   background-color: $eggshell;
+  font-family: 'GlacialIndifferenceRegular';
 }
 
 header {
