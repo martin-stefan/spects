@@ -4,13 +4,13 @@
   min-height: 30rem;
   position: fixed;
   top: 50%;
-  right: 2.5rem;
   transform: translateY(-50%);
   font-size: 1.8rem;
   background-color: #c8d5b9ff;
   box-shadow: 0.3rem 0 1rem rgba(42, 60, 36, 0.562);
   border-radius: 3px;
   padding: 0 2rem 1rem 2rem;
+  transition: 0.5s;
 
 
   &__heading {
@@ -53,10 +53,10 @@
 }
 
 .close {
-  height: 10rem;
-  width: 5rem;
+  height: 15rem;
+  width: 7rem;
   position: absolute;
-  left:-5rem;
+  left:-7rem;
   top: 50%;
   transform: translateY(-50%);
 
@@ -69,6 +69,25 @@
   background-color: #faf3ddff;
   // border: solid 10px blue;
   clip-path: polygon(65% 25%, 100% 0, 100% 100%, 65% 75%);
+  border:none;
 
 
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__svg {
+    position: absolute;
+    top: 50%;
+    right: 0.7rem;
+    transform: translateY(-50%);
+  }
+}
+
+.show {
+  right: 2.5rem;
+}
+
+.hide {
+  right: -29rem;
 }

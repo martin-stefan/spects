@@ -1,8 +1,16 @@
-import React from 'react'; 
+import React, { useState } from 'react';
 
 const StatsBar = () => {
+
+  const [viewStat, switchStat] = useState(false);
+
+
+  const handleClickStats = () => {
+    switchStat(!viewStat);
+  }
+
   return (
-    <div className="stats">
+    <div className={viewStat ? "stats show": "stats hide"}>
 
       <div className="stats__heading">
         <p className="stats__balance">
@@ -52,7 +60,9 @@ const StatsBar = () => {
 
 
         <div className="close">
-          <div className="trap"></div>
+          <button className="trap" onClick={() => handleClickStats()}>
+            <p className="trap__svg">o</p>
+          </button>
         </div>
 
       </div>
