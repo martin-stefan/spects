@@ -14,7 +14,7 @@ import Nav from './Components/Nav/Nav';
 
 import './App.scss';
 
-
+import {ReactComponent as SpectsLogo} from './logoSVG.svg';
 
 function App() {
   const [loggedIn, setLog] = useState(false);
@@ -27,7 +27,7 @@ function App() {
 
 
         <header>
-          <p>spects.io</p>
+          <SpectsLogo className="logo"/>
           
           <Nav>{loggedIn}</Nav>
         </header>

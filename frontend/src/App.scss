@@ -27,10 +27,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 main {
   min-height: 100vh;
   padding: 2rem;
+}
+
+.logo {
+  width: 10rem;
+  height: 10rem;
 }
