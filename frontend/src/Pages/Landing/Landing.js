@@ -29,7 +29,7 @@ const Landing = () => {
 
   
         <div className="landing__item">
-          <h1 className="landing__desc--title">What is spects.io?</h1>
+          <h1 className="landing__desc--title">What is spects?</h1>
           <p className="landing__desc">
             Spects is a tool that allows you to track your progress through many different
             activities.

@@ -25,7 +25,7 @@ const navOut = () => {
   )
 }
 const Nav = (props) => {
-  if (props.loggedIn) {
+  if (props.logged) {
     return navLogged();
   } else {
     return navOut();

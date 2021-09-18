@@ -29,7 +29,7 @@ function App() {
         <header>
           <SpectsLogo className="logo"/>
           
-          <Nav>{loggedIn}</Nav>
+          <Nav logged={loggedIn}/>
         </header>
 
         <main>
