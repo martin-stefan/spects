@@ -14,10 +14,10 @@ import Nav from './Components/Nav/Nav';
 
 import './App.scss';
 
-import {ReactComponent as SpectsLogo} from './logoSVG.svg';
+import {ReactComponent as SpectsLogo} from './svg/logoSVG.svg';
 
 function App() {
-  const [loggedIn, setLog] = useState(false);
+  const [loggedIn, setLog] = useState(true);
 
   return (
     <div className="App">
@@ -34,7 +34,6 @@ function App() {
 
         <main>
           <Route exact path="/" component={ loggedIn ? Dashboard : Landing }></Route>
-          <Route path="/dash" component={ Dashboard }></Route>
           <Route path="/market" component={ Market }></Route>
           <Route path="/settings" component={ Settings }></Route>
           <Route path="/about" component={ About }></Route>

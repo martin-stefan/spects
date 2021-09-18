@@ -1,3 +1,74 @@
 .nav {
   font-size: 1.8rem;
+  display: flex;
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    align-items: center;
+    width: 14rem;
+   
+    text-decoration: none;
+    transition: .3s ease-in-out;
+
+
+    
+    margin-right: -10rem;
+    
+    &:hover > &--block, &:hover {
+      margin-right: 0;
+      display: flex;
+    }
+
+    &--block {
+      height: 3.4rem;
+      width: 10rem;
+      text-align: center;
+      display: inline-block;
+      background-color: #c8d5b9ff;
+      border-radius: 3px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      animation-name: fadeIn;
+      animation-duration: .4s;
+
+    }
+
+    &--title {
+      color: rgb(255, 255, 255);
+      text-decoration: none !important;
+    }
+
+    &--svg {
+      // height: 3rem;
+      width: 4rem;
+      padding: 0.5rem 0;
+      background-color: #2a3c24ff;
+      fill:white;
+      border-radius: 3px;
+      display: inline-block;
+
+    }
+  }
+}
+
+// .spacer {
+//   width: 14rem;
+//   margin-left: -10rem;
+//   background-color: #faf3ddff;
+// }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+    width: 0;
+  }
+   to {
+     opacity: 100%;
+     width: 10rem;
+   }
+
 }

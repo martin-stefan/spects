@@ -1,17 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import {ReactComponent as HomeSVG } from '../../svg/home.svg';
+import {ReactComponent as MarketSVG } from '../../svg/market.svg';
+import {ReactComponent as SettingsSVG } from '../../svg/settings.svg';
+
+
+
 import './Nav.scss';
 
 
 const navLogged = () => {
   return (
     <div className="nav">
-      <Link to="/">Home</Link>
-      <Link to="/dash">Dashboard</Link>
-      <Link to="/market">Marketplace</Link>
-      <Link to="/settings">Settings</Link>
-  
+
+      <Link to="/">
+        <div className="nav__item">
+          <HomeSVG className="nav__item--svg"/>
+          <div className="nav__item--block">
+            <p className="nav__item--title">Dashboard</p>
+          </div>
+        </div>
+      </Link>
+
+      <Link to="/market">
+        <div className="nav__item">
+          <MarketSVG className="nav__item--svg"/>
+          <div className="nav__item--block">
+            <p className="nav__item--title">Marketplace</p>
+          </div>
+        </div>
+      </Link>
+
+      <Link to="/settings">
+        <div className="nav__item">
+          <SettingsSVG className="nav__item--svg"/>
+          <div className="nav__item--block">
+            <p className="nav__item--title">Settings</p>
+          </div>
+        </div>
+      </Link>
+
+        {/* <div className="spacer">
+
+        </div>
+   */}
 
     </div>
   )
