@@ -1,30 +1,75 @@
 
 .landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 5rem;
+
+  &__header {
+    height: 100vh;
+    position: relative;
+  }
+
+  &__content {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5rem 0rem;
+  }
+
+  &__item {
+    width: 80vw;
+  }
 
   &__desc {
-    margin-top: 5rem;
+    margin-bottom: 5rem;
     max-width: 80rem;
     font-size: 1.8rem;
+
+    &--title {
+      font-size: 2rem;
+    }
   }
 }
 
 .demo {
   height: 30vh;
   width: 60vw;
-  background-color: black
+  background-color: black;
+  margin-bottom: 5rem;
 }
 
 .welcome {
-  font-size: 5rem;
+  font-size: 4rem;
+  position: absolute;
+  top: 35%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 80rem;
+  text-align: center;
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: white;
+    padding: 1rem 2rem;
+    margin: 0;
+    background-color: $kombu-green;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    box-shadow: 0 0 1rem rgba(42, 60, 36, 0.61);
+
+    &:hover {
+      top: 49.75%;
+      transition: .2s ease-in-out;
+    }
+  }
 }
 
 .signup {
-  margin-top: 5rem;
+  margin-top: 1rem;
   text-decoration: none;
   font-size: 2rem;
   color: white;
