@@ -14,7 +14,7 @@ const navLogged = () => {
   return (
     <div className="nav">
 
-      <Link to="/">
+      <Link to="/" style={{ textDecoration: 'none' }}>
         <div className="nav__item">
           <HomeSVG className="nav__item--svg"/>
           <div className="nav__item--block">
@@ -23,7 +23,7 @@ const navLogged = () => {
         </div>
       </Link>
 
-      <Link to="/market">
+      <Link to="/market" style={{ textDecoration: 'none' }}>
         <div className="nav__item">
           <MarketSVG className="nav__item--svg"/>
           <div className="nav__item--block">
@@ -32,7 +32,7 @@ const navLogged = () => {
         </div>
       </Link>
 
-      <Link to="/settings">
+      <Link to="/settings" style={{ textDecoration: 'none' }}>
         <div className="nav__item">
           <SettingsSVG className="nav__item--svg"/>
           <div className="nav__item--block">
