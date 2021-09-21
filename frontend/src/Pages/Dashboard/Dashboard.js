@@ -63,12 +63,45 @@ const tasks = [
 ]
 
 const Dashboard = () => {
+
+  const [creating, setCreating] = useState(true);
+
+  const handleClickList = () => {
+    setCreating(!creating);
+  }
+
+  const createItem = () => {
+
+    if (creating) {
+      return (
+        <div className="create__menu">
+          <div className="create__menu--header">
+            <h3 className="header__item">Create a new task</h3>
+          </div>
+
+          <div className="create__menu--content">
+            <form action="">
+              <label htmlFor="">
+                Title: <input type="text" />
+              </label>
+            </form>
+
+            <button>Create</button>
+          </div>
+
+        </div>
+      );
+    } else {
+      return '';
+    }
+  }
+
   return (
     <div className="dash">
 
-      <div className="dash__item">
+      {/* <div className="dash__item">
         <h1 className="dash__item--title">Calendar Style</h1>
-      </div>
+      </div> */}
 
       <div className="dash__item">
         <h1 className="dash__item--title">List Style</h1>
@@ -86,39 +119,36 @@ const Dashboard = () => {
                 <Draggable key={id} draggableId={id} index={index}>
 
                   {provided => (
+                    <li className="dash__list--item" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
 
-                    
+                      <div className="list__main">
+                        <input type="checkbox" name="completed" id="" className="list__check"/>
+                        <p className="list__name">{name}</p>
+                      </div>
 
-                      <li className="dash__list--item" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
-
-                        <div className="list__main">
-                          <input type="checkbox" name="completed" id="" className="list__check"/>
-                          <p className="list__name">{name}</p>
-                        </div>
-
-                        <div className="list__options">
-                          <button className="hamburg btn">Drag</button>
-                          <button className="edit btn">Edit</button>
-                          <button className="delete btn">Delete</button>
-
-                        </div>
-
-                      </li>
-                    
+                      <div className="list__options">
+                        <button className="hamburg btn">Drag</button>
+                        <button className="edit btn">Edit</button>
+                        <button className="delete btn">Delete</button>
+                      </div>
+                    </li>
                   )}
 
                 </Draggable>
                 )})}
-
-
-            
               </ul>
             )}
           </Droppable> 
         </DragDropContext>
+
+        <div className="create" onClick={handleClickList}>
+          <p className="create__button">Create a new item</p>
+        </div>
       </div>
 
-      <div className="dash__item">
+      {createItem()}
+
+      {/* <div className="dash__item">
       <h1 className="dash__item--title">Bar Graph</h1>
         <Bar
             data={state}
@@ -172,7 +202,7 @@ const Dashboard = () => {
               }
             }}
           />
-      </div>
+      </div> */}
       <StatsBar/>
     </div>
   );
