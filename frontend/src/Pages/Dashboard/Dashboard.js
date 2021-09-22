@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import StatsBar from '../../Components/StatsBar/StatsBar';
 
 import {Bar, Pie, Doughnut} from 'react-chartjs-2';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import { ReactComponent as Close } from '../../svg/close.svg';
 
 const state = {
   labels: ['January', 'February', 'March',
@@ -64,29 +65,36 @@ const tasks = [
 
 const Dashboard = () => {
 
-  const [creating, setCreating] = useState(true);
+  const [creating, setCreating] = useState(false);
 
-  const handleClickList = () => {
+  const handleClickCreate = () => {
     setCreating(!creating);
+  }
+
+  const handleSubmit = () => {
+    setCreating(false);
   }
 
   const createItem = () => {
 
     if (creating) {
       return (
-        <div className="create__menu">
-          <div className="create__menu--header">
-            <h3 className="header__item">Create a new task</h3>
-          </div>
+        <div className="create__menu" ref={createRef}>
 
           <div className="create__menu--content">
-            <form action="">
+            <div className="create__menu--header">
+              <h3 className="create__header--item">Create a new task</h3>
+            </div>
+
+            <Close className="close__btn" onClick={ handleClickCreate }/>
+
+            <form onSubmit={handleSubmit}>
               <label htmlFor="">
                 Title: <input type="text" />
               </label>
+              <input type="submit" className="create__menu--btn" value="Create"/>
             </form>
 
-            <button>Create</button>
           </div>
 
         </div>
@@ -95,6 +103,19 @@ const Dashboard = () => {
       return '';
     }
   }
+
+  const createRef = useRef(null)
+  const createBtnRef = useRef(null)
+
+
+  const handleOutsideClick = event => {
+    if (createBtnRef.current && !createBtnRef.current.contains(event.target) && createRef.current && !createRef.current.contains(event.target)) {
+      handleClickCreate();
+    }
+  }
+
+  document.addEventListener("click", handleOutsideClick)
+
 
   return (
     <div className="dash">
@@ -141,7 +162,7 @@ const Dashboard = () => {
           </Droppable> 
         </DragDropContext>
 
-        <div className="create" onClick={handleClickList}>
+        <div className="create" onClick={handleClickCreate} ref={createBtnRef}>
           <p className="create__button">Create a new item</p>
         </div>
       </div>

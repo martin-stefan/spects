@@ -98,6 +98,12 @@ canvas {
     transform: translate(-50%, -50%);
   }
 
+  &__header {
+    &--item {
+      margin: 0;
+    }
+  }
+
   &__menu {
     position: fixed;
     top: 50%;
@@ -105,10 +111,58 @@ canvas {
     transform: translate(-50%, -50%);
     height: 50vh;
     width: 50vw;
-    background-color: $kombu-green;
+    background-color: $eggshell;
     z-index: 10;
     animation-name: fromBottom;
     animation-duration: 0.3s ease-in;
+    // color: white;
+    font-size: 1.6rem;
+    box-shadow: 0 0 20rem rgba(0, 0, 0, 0.575);
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+
+    &--header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &--content {
+      position: relative;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+
+
+    &--btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border: none;
+      border-radius: 3px;
+      padding: 1rem 2rem;
+      background-color: $kombu-green;
+      color: white;
+      transition: .2s ease-in;
+
+      &:hover {
+        cursor: pointer;
+        bottom: 3px;
+      }
+    }
+  }
+
+
+}
+
+.close__btn {
+  position: absolute;
+  top: -1rem;
+  right: -1.5rem;
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
